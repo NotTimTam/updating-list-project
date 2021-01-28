@@ -1,0 +1,220 @@
+html, body {
+    padding: 0;
+    margin: 0;
+
+    background-color: #ccdbf5;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: space-evenly;
+
+    background: url(background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.output {
+    flex-grow: 2;
+}
+
+input[type="text"], input[type="number"], input[type="date"] {
+    border: none;
+    outline: none;
+
+    border-bottom: 1px solid grey;
+
+    transition-property: border-bottom;
+    transition-duration: 0.1s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus {
+    border-bottom: 2px solid #135ddd;
+}
+
+h3, h4, h5 {
+    font-weight: bolder;
+}
+
+h3 {
+    color: #135ddd;
+    
+    font-size: 1.8em;
+}
+
+h4 {
+    color: #0d3d8f;
+
+    border-bottom: 1px solid #0d3d8f;
+
+    font-size: 1.5em;
+}
+
+h5 {
+    color: #000000;
+
+    font-size: 1.1em;
+}
+
+p {
+    font-size: 1em;
+}
+
+.section {
+    background-color: white;
+    padding: 15px;
+    margin: 8px;
+    border-radius: 0.5em;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: white;
+
+    padding: 15px;
+    margin: 8px;
+    border-radius: 0.5em;
+
+    transition: all 0.1s;
+}
+
+button:hover {
+    color: #135ddd;
+
+    transform: translateY(-5px);
+}
+
+button:active {
+    background-color: lightgray;
+}
+
+.inlineButton {
+    border: none;
+    outline: none;
+    background-color: white;
+
+    border: 1px solid black;
+
+    padding: 15px;
+    margin: 8px;
+    border-radius: 0.5em;
+
+    transition: all 0.1s;
+}
+
+.inlineButton:hover {
+    color: #135ddd;
+
+    transform: translateY(-3px);
+    background-color: rgb(240, 240, 240);
+}
+
+.inlineButton:active {
+    background-color: lightgray;
+}
+
+.user-button {
+    border: none;
+    outline: none;
+    background-color: white;
+
+    display: block;
+
+    border: 1px solid black;
+
+    padding: 15px;
+    margin: 8px;
+    border-radius: 0.5em;
+
+    transition: all 0.1s;
+}
+
+.user-button:hover {
+    color: #135ddd;
+
+    transform: translateY(-3px);
+    background-color: rgb(240, 240, 240);
+}
+
+.user-button:active {
+    background-color: lightgray;
+}
+
+.checkbox {
+	-webkit-appearance: none;
+	background-color: #ffffff;
+	border: 1px solid #797979;
+	padding: 9px;
+	border-radius: 1px;
+	display: inline-block;
+    position: relative;
+    top: 7px;
+    outline: none;
+
+    transition: all 0.3s;
+}
+
+.checkbox:hover {
+    transform: rotate(180deg);
+    border: #135ddd 2px solid;
+}
+
+.checkbox:checked {
+    background: radial-gradient(#135ddd 50%, white 50%);
+    background-position: 0.1px 0.1px;
+    border: 1px solid #000000;
+    transform: rotate(360deg);
+    border-radius: 0.7em;
+    border: 1px solid #797979;
+}
+
+label {
+    user-select: none;
+    cursor: pointer;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    cursor: pointer;
+}
+
+input {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    user-select: none;
+}
+
+.radio {
+	-webkit-appearance: none;
+    background-color: #ffffff;
+	border: 1px solid #797979;
+	padding: 9px;
+	border-radius: 1px;
+	display: inline-block;
+    position: relative;
+    top: 5px;
+    outline: none;
+    border-radius: 0.7em;
+
+    transition: all 0.3s;
+}
+
+.radio:hover {
+    transform: rotate(180deg);
+    border-radius: 0em;
+    border: #135ddd 2px solid;
+}
+
+.radio:checked {
+    background: radial-gradient(#135ddd 50%, white 50%);
+    background-position: 0.1px 0.1px;
+    border: 1px solid #000000;
+    transform: rotate(360deg);
+    border-color: #797979
+}

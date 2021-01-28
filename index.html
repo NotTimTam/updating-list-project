@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <span id="top"></span>
+    <div class="form">
+        <div class="section">
+            <h3>Personal Info</h3>
+            
+            <h4>Name</h4>
+            <input type="text" placeholder="Full Name" id="fullName">
+            
+            <h4>Date of Birth</h4>
+            <input type="date" id="dob">
+        </div>
+
+        <div class="section">
+            <h3>Flight Info</h3>
+            
+            <h4>Origin (city)</h4>
+            <input type="text" id="origin" placeholder="Phoenix, AZ">
+            
+            <h5>When do you want to leave?</h5>
+            <input type="date" id="leave">
+            
+            <h4>Destination (city)</h4>
+            <input type="text" id="destination" placeholder="Phoenix, AZ">
+            
+            <h5>When do you want to return?</h5>
+            <input type="date" id="return">
+        </div>
+
+        <div class="section">
+            <h3>Extra Info</h3>
+            
+            <h4>Number of Bags (+$20 each)</h4>
+            <input type="number" id="bagCount" placeholder="Number of Bags" value="0">
+            
+            <h4>Type of Meal</h4>
+            <input type="radio" class="radio" id="Chicken" name="meal" value="Chicken" checked>
+            <label for="Chicken">Chicken</label>
+            <br>
+            <input type="radio" class="radio" id="Fish" name="meal" value="Fish">
+            <label for="Fish">Fish</label>
+            <br>
+            <input type="radio" class="radio" id="Vegetarian" name="meal" value="Vegetarian">
+            <label for="Vegetarian">Vegetarian</label>
+        
+            <h4>Extras (+$10 each)</h4>
+            <div>
+                <input type="checkbox" class="checkbox" name="legroom" id="legroom">
+                <label for="legroom">Extra legroom</label>
+            </div>
+
+            <div>
+                <input type="checkbox" class="checkbox" name="windowSeat" id="windowSeat">
+                <label for="windowSeat">Window seat</label>
+            </div>
+
+            <div>
+                <input type="checkbox" class="checkbox" name="headphones" id="headphones">
+                <label for="headphones">Complimentary headphones</label>
+            </div>
+
+            <div>
+                <input type="checkbox" class="checkbox" name="extraFood" id="extraFood">
+                <label for="extraFood">Extra food</label>
+            </div>
+        
+            <div id="error" style="padding-top: 5px;"></div>
+        </div>
+    
+        <button onclick="addToList(); location.href = '#top';"">Submit Passenger Info</button>
+    
+        <div class="row" id="printSpace"></div>
+    </div>
+
+    <div class="output">
+        <div class="section">
+            <h3>Get Specific User Information:</h3>
+            <label for="users">Select a user: </label><select name="users" id="userList" onchange="displayUser(this.value); location.href = '#dataArea';">
+            <option value="">Choose a Name</option></select>
+            
+            <p><strong>Or:</strong></p>
+
+            <button class="inlineButton" onclick="print(userList); location.href = '#dataArea';">Print Out All Users</button>
+            <button class="inlineButton" onclick="printSorted('fullName'); location.href = '#dataArea';">Print Out All Users Alphabetically</button>
+            <button class="inlineButton" onclick="printSorted('id'); location.href = '#dataArea';">Print Out All Users By ID</button>
+        </div>
+
+        <div class="section" id="dataArea">
+            <h3>User Data</h3>
+            <div id="dataOutput"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
